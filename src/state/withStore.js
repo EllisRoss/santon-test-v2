@@ -17,7 +17,13 @@ export function withStore(storeName, fill) {
       }
 
       handleStoreUpdate(data) {
-        this.setState(data);
+        debugger
+        this.setState({data: data});
+        // debugger
+        // this.setState(data, this.forceUpdate(() => {
+        //   console.log('handleStoreUpdate ', this.state.data)
+        // }));
+
       }
 
       componentDidMount() {
@@ -29,6 +35,8 @@ export function withStore(storeName, fill) {
       }
 
       render() {
+        debugger
+        //console.log(this.state.data)
         return (
           <Component
             {...this.props}

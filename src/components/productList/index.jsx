@@ -23,6 +23,4 @@ class ProductList extends React.Component {
     }
 }
 
-export default withStore("products", (data) => {
-    return data
-})(ProductList);
+export default withStore("products", (data) => data)(ProductList);

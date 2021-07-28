@@ -29,7 +29,6 @@ const ProductsStore = new Store("products", {
       type: REMOVE_PRODUCT,
       action(state, payload) {
         const { id } = payload;
-        debugger
         const products = [...state.products];
         const index = products.findIndex((product) => product.id === id);
 
