@@ -17,7 +17,8 @@ const AuthStore = new Store("auth", {
       action(state, payload) {
         const { isAuth } = payload;
 
-        debugger
+        document.cookie = `isAuth: ${isAuth}`
+        alert(document.cookie)
 
         return {
           ...state,

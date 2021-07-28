@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import "./add-product.scss";
 import {Formik, Form, Field, ErrorMessage} from 'formik';
-import {Registry} from "../../state/common/store/registry";
 import {ADD_PRODUCT} from "../../state/stores/ProductsStore";
 import {withStore} from "../../state/withStore";
 
@@ -57,27 +56,41 @@ const AddProductForm = (props) => {
             {({isSubmitting}) => (
                 <Form>
                     <div className='addProduct'>
-                        <div>Title
-                            <Field name="title"/>
-                            <ErrorMessage name="title" component="label"/>
-                        </div>
-                        <div>ID
-                            <Field name="id"/>
-                            <ErrorMessage name="id" component="label"/>
-                        </div>
-                        <div>Description
-                            <Field name="description"/>
-                            <ErrorMessage name="description" component="label"/>
-                        </div>
-                        <div>Price
-                            <Field name="price"/>
-                            <ErrorMessage name="price" component="label"/>
-                        </div>
-                        <div>
-                            <button type="submit" disabled={isSubmitting}>Add</button>
-                        </div>
-                        <div>
-                            <button onClick={onClose}>Close</button>
+                        <div className='addProduct-content'>
+                            <div>
+                                <div>
+                                    Title
+                                </div>
+                                <Field name="title"/>
+                                <ErrorMessage name="title" component="div"/>
+                            </div>
+                            <div>
+                                <div>
+                                    ID
+                                </div>
+                                <Field name="id"/>
+                                <ErrorMessage name="id" component="div"/>
+                            </div>
+                            <div>
+                                <div>
+                                    Description
+                                </div>
+                                <Field name="description"/>
+                                <ErrorMessage name="description" component="div"/>
+                            </div>
+                            <div>
+                                <div>
+                                    Price
+                                </div>
+                                <Field name="price"/>
+                                <ErrorMessage name="price" component="div"/>
+                            </div>
+                            <div>
+                                <button className='addProduct-add-button' type="submit" disabled={isSubmitting}>Add</button>
+                            </div>
+                            <div>
+                                <button className='addProduct-close-button' onClick={onClose}>Close</button>
+                            </div>
                         </div>
                     </div>
                 </Form>

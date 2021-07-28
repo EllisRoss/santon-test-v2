@@ -48,19 +48,27 @@ const authForm = (props) => {
             {({isSubmitting}) => (
                 <Form>
                     <div className='auth'>
-                        <div>login
-                            <Field name="login"/>
-                            <ErrorMessage name="login" component="label"/>
-                        </div>
-                        <div>password
-                            <Field name="password"/>
-                            <ErrorMessage name="password" component="label"/>
-                        </div>
-                        <div>
-                            <button type="submit" disabled={isSubmitting}>Add</button>
-                        </div>
-                        <div>
-                            <button onClick={onClose}>Close</button>
+                        <div className='auth-content'>
+                            <div>
+                                <div>
+                                    login
+                                </div>
+                                <Field name="login"/>
+                                <ErrorMessage name="login" component="div"/>
+                            </div>
+                            <div>
+                                <div>
+                                    password
+                                </div>
+                                <Field name="password"/>
+                                <ErrorMessage name="password" component="div"/>
+                            </div>
+                            <div>
+                                <button className='auth-login-button' type="submit" disabled={isSubmitting}>login</button>
+                            </div>
+                            <div>
+                                <button  className='auth-close-button' onClick={onClose}>close</button>
+                            </div>
                         </div>
                     </div>
                 </Form>

@@ -4,10 +4,22 @@
   bottom: 0;
   left: 0;
   right: 0;
-  width: 800px;
+  width: 700px;
+  height: 300px;
   margin: 20% auto;
   z-index: 9999;
-  display: block;
   background-color: lightgrey;
 
+  &-content {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+  }
+  &-add-button {
+    margin: 10px;
+  }
+  &-close-button {
+    margin: 10px;
+  }
 }
