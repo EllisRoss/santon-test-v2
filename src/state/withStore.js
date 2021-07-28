@@ -35,7 +35,6 @@ export function withStore(storeName, fill) {
       }
 
       render() {
-        debugger
         //console.log(this.state.data)
         return (
           <Component

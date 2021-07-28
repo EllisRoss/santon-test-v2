@@ -17,6 +17,8 @@ const AuthStore = new Store("auth", {
       action(state, payload) {
         const { isAuth } = payload;
 
+        debugger
+
         return {
           ...state,
           isAuth,
